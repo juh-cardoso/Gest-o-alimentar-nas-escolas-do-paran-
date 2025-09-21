@@ -5,19 +5,31 @@ body {
   background-size: cover;
   text-align: center;
 }
-
-/* Logo canto superior e inferior */
-.logo-superior {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 40px;
+/* Faixa inferior corrigida */
+.faixa-inferior {
+  background: #003b1f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;              /* aumenta espaço */
+  min-height: 60px;           /* garante altura */
+  position: relative;
 }
+
+/* Logo inferior dentro da faixa */
 .logo-inferior {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
   width: 40px;
+  position: absolute;
+  left: 15px;
+  bottom: 50%;                /* centraliza vertical */
+  transform: translateY(50%); /* ajusta centralização */
+}
+
+/* Texto dentro da faixa */
+.faixa-inferior .assinatura {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Faixa superior */
@@ -136,38 +148,7 @@ body {
   padding: 10px;
   position: relative;
 }
-🎉 script.js
-js
-Copiar código
-document.getElementById("parabensBtn").addEventListener("click", () => {
-  confete();
-});
 
-function confete() {
-  for (let i = 0; i < 50; i++) {
-    let confetti = document.createElement("div");
-    confetti.classList.add("confetti");
-    document.body.appendChild(confetti);
-
-    confetti.style.left = Math.random() * window.innerWidth + "px";
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-
-    setTimeout(() => confetti.remove(), 5000);
-  }
-}
-.confetti {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  top: 0;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-  }
 }
 .box {
   background: #111;
@@ -189,5 +170,37 @@ function confete() {
 document.querySelectorAll(".box").forEach(box => {
   box.addEventListener("click", () => {
     confete();
+  });
+});
+
+
+function confete() {
+  for (let i = 0; i < 50; i++) {
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    document.body.appendChild(confetti);
+
+    confetti.style.left = Math.random() * window.innerWidth + "px";
+    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    setTimeout(() => confetti.remove(), 5000);
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("parabensBtn");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      confete();
+    });
+  }
+
+  
+  document.querySelectorAll(".box").forEach(box => {
+    box.addEventListener("click", () => {
+      confete();
+    });
   });
 });
