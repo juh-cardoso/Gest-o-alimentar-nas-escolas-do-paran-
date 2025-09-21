@@ -1,9 +1,23 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url("img/GOLDEN\ HOUR\ -\ 3.png") no-repeat center center fixed;
+  background: url("fundo.png") no-repeat center center fixed;
   background-size: cover;
   text-align: center;
+}
+
+/* Logo canto superior e inferior */
+.logo-superior {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+}
+.logo-inferior {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 40px;
 }
 
 /* Faixa superior */
@@ -77,14 +91,16 @@ body {
   white-space: nowrap;
 }
 
-/* Rodapé */
-.rodape {
+/* Tarja branca ajustada */
+.tarja-branca {
   background: #fff;
-  margin-top: 40px;
+  margin: 40px auto;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
 }
 
 .garota {
@@ -111,6 +127,35 @@ body {
 #parabensBtn:hover {
   background: #095;
 }
+
+/* Faixa inferior */
+.faixa-inferior {
+  background: #003b1f;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+🎉 script.js
+js
+Copiar código
+document.getElementById("parabensBtn").addEventListener("click", () => {
+  confete();
+});
+
+function confete() {
+  for (let i = 0; i < 50; i++) {
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    document.body.appendChild(confetti);
+
+    confetti.style.left = Math.random() * window.innerWidth + "px";
+    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    setTimeout(() => confetti.remove(), 5000);
+  }
+}
 .confetti {
   position: fixed;
   width: 10px;
@@ -124,3 +169,25 @@ body {
     transform: translateY(100vh) rotate(360deg);
   }
 }
+.box {
+  background: #111;
+  color: #fff;
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  position: relative;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.6);
+}
+
+document.querySelectorAll(".box").forEach(box => {
+  box.addEventListener("click", () => {
+    confete();
+  });
+});
