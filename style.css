@@ -12,8 +12,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;              /* aumenta espaço */
-  min-height: 60px;           /* garante altura */
+  padding: 10px;              /* aumenta espaço */
+  min-height: 40px;           /* garante altura */
   position: relative;
 }
 
@@ -170,37 +170,5 @@ body {
 document.querySelectorAll(".box").forEach(box => {
   box.addEventListener("click", () => {
     confete();
-  });
-});
-
-
-function confete() {
-  for (let i = 0; i < 50; i++) {
-    let confetti = document.createElement("div");
-    confetti.classList.add("confetti");
-    document.body.appendChild(confetti);
-
-    confetti.style.left = Math.random() * window.innerWidth + "px";
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-
-    setTimeout(() => confetti.remove(), 5000);
-  }
-}
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("parabensBtn");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      confete();
-    });
-  }
-
-  
-  document.querySelectorAll(".box").forEach(box => {
-    box.addEventListener("click", () => {
-      confete();
-    });
   });
 });
