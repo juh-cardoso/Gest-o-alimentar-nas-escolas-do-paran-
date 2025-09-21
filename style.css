@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('img/GOLDEN\ HOUR\ -\ 3.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #0d1b0d;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #0d1b0d;
+  padding: 10px 20px;
+}
+
+header a {
+  background: #fff;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #0d1b0d;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #0d1b0d;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: #000;
+  color: white;
+  width: 180px;
+  height: 120px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 140px;
+  height: 25px;
+  background: #d9d9d9;
+  border-radius: 6px 6px 0 0;
+}
+
+.card h2 {
+  margin-top: -5px;
+  position: relative;
+  z-index: 2;
+  font-size: 1.1em;
+  color: #0d1b0d;
+  cursor: pointer;
+}
+
+/* Tooltip efeito */
+.card h2[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d1b0d;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.card a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.bottom-section img {
+  width: 120px;
+  height: auto;
+}
+
+.bottom-text {
+  text-align: center;
+}
+
+.bottom-text strong {
+  font-size: 1.2em;
+  color: #0d1b0d;
+}
+
+/* Botão com efeito de parabéns */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background: #0d1b0d;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: #145214;
+  animation: celebrate 1s ease;
+}
+
+/* Confete/brilho simulando parabéns */
+@keyframes celebrate {
+  0% { box-shadow: 0 0 0px gold; }
+  25% { box-shadow: 0 0 10px gold; }
+  50% { box-shadow: 0 0 20px orange, 0 0 40px yellow; }
+  75% { box-shadow: 0 0 10px gold; }
+  100% { box-shadow: 0 0 0px gold; }
+}
+
+footer {
+  background: #0d1b0d;
+  padding: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
