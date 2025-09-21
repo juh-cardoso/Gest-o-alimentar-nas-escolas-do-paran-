@@ -17,6 +17,14 @@ body {
   position: relative;
 }
 
+/* Logo canto superior e inferior */
+.logo-superior {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+}
+
 /* Logo inferior dentro da faixa */
 .logo-inferior {
   width: 40px;
