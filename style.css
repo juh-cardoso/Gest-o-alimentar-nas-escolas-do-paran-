@@ -12,8 +12,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;              /* aumenta espaço */
-  min-height: 40px;           /* garante altura */
+  padding: 40px;              /* aumenta espaço */
+  min-height: 30px;           /* garante altura */
   position: relative;
 }
 
