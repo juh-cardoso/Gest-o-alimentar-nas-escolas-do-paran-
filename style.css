@@ -164,49 +164,4 @@ body {
   box-shadow: 0 0 15px rgba(0, 255, 100, 0.6);
 }
 
-document.querySelectorAll(".box").forEach(box => {
-  box.addEventListener("click", () => {
-    confete();
-  });
-});
-
-function confete() {
-  for (let i = 0; i < 50; i++) {
-    let confetti = document.createElement("div");
-    confetti.classList.add("confetti");
-    document.body.appendChild(confetti);
-
-    confetti.style.left = Math.random() * window.innerWidth + "px";
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-
-    setTimeout(() => confetti.remove(), 5000);
-  }
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("parabensBtn");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      confete();
-    });
-  }
-
-  document.querySelectorAll(".box").forEach(box => {
-    box.addEventListener("click", () => {
-      confete();
-    });
-  });
-});          .confetti {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  top: 0;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-  }
-}
  
