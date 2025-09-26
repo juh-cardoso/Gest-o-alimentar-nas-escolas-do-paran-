@@ -89,7 +89,7 @@ body {
   display: block;
   margin: 8px 0;
   text-decoration: none;
-  color: #ccc;
+  color: #000000;
 }
 
 .box a:hover {
@@ -103,7 +103,7 @@ body {
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  background: #993232;
+  background: #ffffff;
   color: #fff;
   padding: 5px 10px;
   border-radius: 6px;
