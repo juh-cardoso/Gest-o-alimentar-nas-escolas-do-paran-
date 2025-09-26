@@ -76,8 +76,8 @@ body {
 }
 
 .box {
-  background: #21502d;
-  color: #21502d;
+  background: #000000;
+  color: #ffffff;
   padding: 15px;
   width: 200px;
   border-radius: 8px;
@@ -149,7 +149,7 @@ body {
 }
 .box {
   background: #21502d;
-  color: #fff;
+  color: #ffffff;
   padding: 15px;
   width: 200px;
   border-radius: 8px;
