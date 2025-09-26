@@ -89,11 +89,11 @@ body {
   display: block;
   margin: 8px 0;
   text-decoration: none;
-  color: #62a846;
+  color: #ffffff;
 }
 
 .box a:hover {
-  color: #4caf50;
+  color: #779b78;
 }
 
 /* Tooltip */
