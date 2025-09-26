@@ -8,7 +8,7 @@ body {
 /* Faixa inferior corrigida */
 .faixa-inferior {
   background: #003b1f;
-  color: #fff;
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +89,7 @@ body {
   display: block;
   margin: 8px 0;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 .box a:hover {
