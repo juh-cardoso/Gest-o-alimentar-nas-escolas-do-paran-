@@ -8,7 +8,7 @@ body {
 /* Faixa inferior corrigida */
 .faixa-inferior {
   background: #003b1f;
-  color: #000000;
+  color: #ff0000;
   display: flex;
   align-items: center;
   justify-content: center;
