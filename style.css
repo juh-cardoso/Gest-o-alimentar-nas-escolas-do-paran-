@@ -31,7 +31,6 @@ body {
   position: absolute;
   left: 15px;
   bottom: 50%;                /* centraliza vertical */
-  transform: translateY(50%); /* ajusta centralização */
 }
 
 /* Texto dentro da faixa */
