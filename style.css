@@ -63,10 +63,10 @@ body {
   margin: 20px 0;
   font-size: 2.5rem;
   color: #123d1e;
-}
+}color: #123d1e;
 
 /* Caixas */
-.container {
+.container {color: #123d1e;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -103,7 +103,7 @@ body {
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff;
+  background: #000000;
   color: #000000;
   padding: 5px 10px;
   border-radius: 6px;
