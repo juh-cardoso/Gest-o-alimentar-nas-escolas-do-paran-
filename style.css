@@ -93,7 +93,7 @@ body {
 }
 
 .box a:hover {
-  color: #ffffff;
+  color: #7d9164;
 }
 
 /* Tooltip */
@@ -149,7 +149,7 @@ body {
 }
 .box {
   background: #21502d;
-  color: #000000;
+  color: #ffffff;
   padding: 15px;
   width: 200px;
   border-radius: 8px;
